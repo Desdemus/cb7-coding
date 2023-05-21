@@ -1,4 +1,14 @@
-import { cartItems, cartEl } from "../script.js";
+import {
+    cartItems,
+    rootEl,
+    cartEl,
+    productList,
+    navbarEl,
+    heroEl,
+    productListTitle,
+    productListData,
+} from "../script.js";
+import { usersList } from "./credentials.js";
 
 export const cE = (el) => document.createElement(el);
 
@@ -35,7 +45,6 @@ export const createProduct = (data, size = null) => {
     priceEl.textContent = data.price + " $";
 
     textWrapperEl.append(titleEl, descriptionEl, ratingEl, priceEl);
-
     wrapperEl.append(imageEl, textWrapperEl);
 
     return wrapperEl;
@@ -136,5 +145,41 @@ export const createCartModal = (cartItems, parent = null) => {
         cartEl.disabled = false;
     });
 
+    return wrapperEl;
+};
+
+export const createLogIn = () => {
+    const wrapperEl = cE("form");
+    const usernameInputEl = cE("input");
+    const passwordInputEl = cE("input");
+    const submitBtnEl = cE("input");
+
+    wrapperEl.className = "login";
+    usernameInputEl.type = "text";
+    usernameInputEl.placeholder = "Username";
+    passwordInputEl.type = "password";
+    passwordInputEl.placeholder = "Password";
+    submitBtnEl.type = "submit";
+
+    wrapperEl.addEventListener("submit", (event) => {
+        event.preventDefault();
+
+        const isAuth = !!usersList.find(
+            (user) =>
+                user.username === event.srcElement[0].value &&
+                user.password === event.srcElement[1].value
+        );
+
+        if (isAuth) {
+            navbarEl.style.display = "flex";
+            heroEl.style.display = "flex";
+            rootEl.append(productListTitle, productList);
+            rootEl.removeChild(wrapperEl);
+        } else {
+            alert("Username e/o password non corretta");
+        }
+    });
+
+    wrapperEl.append(usernameInputEl, passwordInputEl, submitBtnEl);
     return wrapperEl;
 };

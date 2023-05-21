@@ -5,23 +5,27 @@ import {
 	createProduct,
 	createProductModal,
 	createCartModal,
+	createLogIn,
 } from "./utils/fn.js";
 
-// SYNC
-const rootEl = qS("#root");
-const productList = cE("div");
-const productListTitle = cE("h2");
-const searchProductEl = qS(".searchInput");
+// ------------- SYNC -------------
+export const rootEl = qS("#root");
+export const productList = cE("div");
+export const productListTitle = cE("h2");
+export const searchProductEl = qS(".searchInput");
 export const cartEl = qS(".cart");
-// let searchProductValue = "";
-let productListData = [];
+export const navbarEl = qS(".navbar");
+export const heroEl = qS(".hero");
+export let productListData = [];
 export let cartItems = [];
 
 productList.className = "productList";
 productListTitle.textContent = "Products for you!";
-rootEl.append(productListTitle, productList);
+navbarEl.style.display = "none";
+heroEl.style.display = "none";
+rootEl.append(createLogIn());
 
-// ASYNC
+// -------------  ASYNC -------------
 fetch("https://dummyjson.com/products")
 	.then((res) => res.json())
 	.then((data) => {
@@ -42,9 +46,8 @@ fetch("https://dummyjson.com/products")
 		);
 	});
 
-// EVENTS
+// -------------  EVENTS -------------
 searchProductEl.addEventListener("input", (evt) => {
-	// if (evt.target.value.length >= 3) {
 	productList.textContent = "";
 
 	productListData
@@ -52,7 +55,6 @@ searchProductEl.addEventListener("input", (evt) => {
 			product.description.toLowerCase().includes(evt.target.value.toLowerCase())
 		)
 		.forEach((obj) => productList.append(createProduct(obj)));
-	// }
 });
 
 cartEl.addEventListener("click", () => {
