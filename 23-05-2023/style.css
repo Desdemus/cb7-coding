@@ -1,0 +1,86 @@
+body {
+  background: linear-gradient(#14e48a, #5c1f5a);
+  height: 100vh;
+}
+
+.login {
+  color: rgb(255, 255, 255);
+  position: absolute;
+  width: 260px;
+  height: 240px;
+  top: calc(50% - 150px);
+  left: calc(50% - 130px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+
+  border-radius: 16px;
+}
+
+.login input {
+  color: rgb(255, 255, 255);
+  padding: 5px 10px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.209);
+  border: none;
+  outline: none;
+}
+
+.submit__login {
+  color: white;
+  width: 80px;
+  padding: 5px 10px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  box-shadow: 20px 20px 40px -6px rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  transition: all 0.35s;
+}
+
+.submit__login:hover {
+  transform: scale(1.2);
+}
+
+.cart {
+  top: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  position: absolute;
+}
+
+.cart__item {
+  width: 200px;
+  height: 180px;
+  padding: 6px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.3);
+  border: none;
+  cursor: pointer;
+  transition: all 0.35s;
+}
+
+.cart div:hover {
+  background-color: rgba(238, 238, 26, 0.456);
+  color: white;
+}
+
+.cart div:active {
+  background-color: lightsalmon;
+  transform: scale(0.8);
+}
+
+.welcome__title {
+  position: relative;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
