@@ -1,8 +1,14 @@
+import { AddSection, createToDoList, createEl, qS, qSA } from "./utils/fn.js"
 
-//fetch
-import { createToDoList, createEl } from "./utils/fn.js"
-//fn create el
+import { GET } from "./utils/fetch.js"
 
-const CTDL = createToDoList()
-document.body.append(CTDL)
+
+
+
+
+
+
+
+
+
 

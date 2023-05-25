@@ -1,8 +1,25 @@
 body {
-  color: white;
+  background: linear-gradient(red, blue);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 20px;
 }
 
 .toDoItem {
-  border: 2px solid aqua;
+  height: 100px;
+  width: 200px;
+  text-align: center;
+  padding: 20px;
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   color: black;
+  gap: 15px;
+  list-style: none;
+  cursor: pointer;
+  background-color: aqua;
 }
