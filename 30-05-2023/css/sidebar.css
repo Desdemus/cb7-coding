@@ -1,0 +1,28 @@
+.searchbox {
+  text-align: left;
+
+  font-size: inherit;
+  color: inherit;
+
+  resize: none;
+
+  appearance: none;
+
+  box-sizing: border-box;
+
+  background-color: rgba(0, 0, 0, 0);
+
+  width: 100%;
+
+  outline-style: none;
+
+  font-family: inherit;
+
+  border-radius: 0px;
+
+  border-width: 0px;
+
+  padding: 12px;
+}
+.searchbox input {
+}
