@@ -1,0 +1,92 @@
+body {
+  margin: 0;
+  background-color: #d3d4d9;
+}
+
+.header {
+  color: white;
+  font-style: oblique;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  justify-content: center;
+  height: 100px;
+  background-color: rgb(251, 168, 15);
+  border-bottom-left-radius: 40%;
+  border-bottom-right-radius: 40%;
+  box-shadow: 5px 5px 4px 5px #888888;
+}
+
+h1 {
+  font-size: 60px;
+  text-shadow: 2px 4px 4px rgba(46, 91, 173, 0.6);
+}
+
+.fascia18,
+.fascia36,
+.fascia64 {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+h2 {
+  font-size: 35px;
+  background-color: rgb(255, 255, 255);
+  width: fit-content;
+}
+.titleSpan {
+}
+.contentDiv {
+  background-color: #11acefdf;
+  font-size: 24px;
+  margin: auto;
+  width: 200px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  border: 2px solid black;
+  text-align: center;
+  border-radius: 50px;
+  gap: 10px;
+  border-style: none;
+
+  box-shadow: 0px 5px 4px 5px #888888;
+  transition: 0.35s ease;
+}
+.contentDiv:hover {
+  background-color: rgb(251, 168, 15);
+}
+
+.nameSpan {
+  padding: 20px;
+  border-radius: 20px;
+  border: 2px solid rgb(0, 0, 0);
+  background-color: rgb(255, 255, 255);
+  cursor: pointer;
+  border-style: none;
+}
+.ageSpan,
+.phoneSpan {
+  color: rgb(255, 255, 255);
+}
+
+.msgWrapper {
+  height: 80px;
+}
+.messageSpan {
+  color: rgb(0, 0, 0);
+  background-color: #f95215ba;
+  width: 40%vh;
+  font-size: 24px;
+  padding: 20px;
+  height: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border: 2px solid red;
+}
